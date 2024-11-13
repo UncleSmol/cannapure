@@ -1,0 +1,72 @@
+/*Fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*font styles for the entire body*/
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+/*Hot Picks Header Titles*/
+.strain-type,
+.strain-class,
+.thc-percent,
+.strain-name,
+.selling-price,
+.rating,
+.lab-child p,
+.strain-price {
+	font-size: 9pt;
+	padding: 0 5pt;
+}
+
+.strain-description {
+	margin-top: -3pt;
+	font-size: 7pt;
+	padding: 0 5pt;
+	font-style: italic;
+}
+
+/*Green Hot Picks labels*/
+.thc-percent,
+.rating,
+.strain-price {
+	color: rgb(9, 133, 0);
+	background-color: khaki;
+}
+
+/*Hot Picks descriptions text*/
+.header-title h1 {
+	font-size: 14pt;
+	overflow: hidden;
+}
+
+/*LAB Heading*/
+.lab-heading {
+	font-size: 12pt;
+	overflow: hidden;
+}
+
+.lab-child ul li {
+	font-size: 8pt;
+	margin: 0 9pt;
+}
+
+.nav-links a {
+	font-size: 10pt;
+}
+
+/*Lab Heading*/
+.lab-heading {
+	margin: 5pt auto 0 2pt;
+	text-align: center;
+}
+
+.lab-child p {
+	font-size: 7pt;
+	text-align: center;
+}
+
+.section > p {
+	margin: 0 8pt;
+	text-align: center;
+}

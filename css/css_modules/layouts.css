@@ -1,0 +1,407 @@
+/*Layouts CSS - Shapes the overall placement and positioning of all elements*/
+
+/*header*/
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 55px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	padding: 5pt;
+	overflow: none;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	background-color: khaki;
+	z-index: 99999999;
+}
+
+/*Hamburger Menu*/
+#hamburgerMenu {
+	width: 30px;
+	height: 30px;
+	margin: 0 8pt;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	cursor: pointer;
+}
+
+/*Hamburger Menu spans*/
+#hamburgerMenu span {
+	width: 90%;
+	height: 8%;
+	background-color: black;
+	border-radius: 10px;
+}
+
+.navbar {
+	margin-top: 45pt;
+	height: max-content;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	width: 250px;
+	margin-left: 5pt;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+	display: none;
+	position: fixed;
+	background-color: white;
+	z-index: 9999999;
+}
+
+.nav-heading h1 {
+	overflow: hidden;
+	background-color: khaki;
+	margin-bottom: 8pt;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	padding-left: 8pt;
+}
+
+/*Navigation Links*/
+.nav-links {
+	width: 95%;
+	height: auto;
+	padding: 2pt;
+	overflow: hidden;
+}
+
+/*Navigation links anchor tags - targeted to set a row flex display for a side-by-side layout*/
+.nav-links a {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 60px;
+	gap: 5pt;
+	padding: 0 2pt;
+	overflow: hidden;
+}
+
+.nav-links a p {
+	width: 100%;
+	line-height: 1.2;
+	margin: -10pt auto auto 20pt;
+	overflow: hidden;
+}
+
+.nav-logo {
+	width: 80%;
+	height: 180px;
+	overflow: hidden;
+	margin: 5pt auto;
+}
+
+/*Navigation Line Breaker*/
+.line-breaker {
+	height: 2px;
+	width: 100%;
+	background-color: rgb(174, 174, 174);
+	margin: -2pt auto;
+}
+
+.menu-icon {
+	margin-top: 4pt;
+	height: auto;
+}
+
+/*Member Login Container*/
+#member-log-in-container {
+	display: flex;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border: 1px rgb(0, 0, 0) solid;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 5pt;
+}
+
+/*Main*/
+main {
+	margin-top: 30pt;
+	padding: 8pt;
+	width: 100vw;
+	overflow: hidden;
+}
+
+/*HOT PICKS*/
+
+.hpotw-heading {
+	display: grid;
+	place-content: center;
+}
+
+.hpotw-heading h1 {
+	margin: 10pt 0;
+	width: 100%;
+	height: auto;
+	overflow-wrap: break-word;
+	text-align: center;
+	display: grid;
+	place-content: center;
+}
+
+.hpotw-heading h1 span {
+	overflow: hidden;
+}
+
+.hpotw-heading h1 span:first-child {
+	font-size: 2.5rem;
+}
+
+.hot-picks {
+	height: 210px !important;
+	min-width: 135px !important;
+	overflow: hidden;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+}
+
+.hot-picks-image {
+	height: 100px;
+	width: 100%;
+	-webkit-border-radius: 20px 20px 0 0;
+	-moz-border-radius: 20px 20px 0 0;
+	-ms-border-radius: 20px 20px 0 0;
+	-o-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+}
+
+.hot-picks-image img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.hot-picks-wrapper {
+	display: flex;
+	justify-content: left;
+	flex-wrap: nowrap;
+	scrollbar-width: none;
+	gap: 10pt;
+	height: 260px;
+	width: 100%;
+	scroll-behavior: smooth;
+	padding-left: 5pt;
+	padding-right: 5pt;
+}
+
+/*Section class margins*/
+#labContainer {
+	margin: 5pt;
+	display: flex;
+	gap: 5pt;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: white;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/*Lab Children*/
+.lab-child {
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	display: inline-block;
+	place-content: center;
+	-webkit-transition: scale 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px black solid;
+	background-color: khaki;
+}
+
+.lab-child:hover {
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	transform: scale(0.9);
+	background-color: rgb(255, 255, 255);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+}
+
+/*Page not ready message*/
+#page404 {
+	width: 80%;
+	background-color: khaki;
+	padding: 5pt;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	position: fixed;
+	top: 60px;
+	left: 50%;
+	z-index: 999999;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	display: none;
+}
+
+/*Lab*/
+.section {
+	height: auto;
+	padding: 5pt;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	margin-top: 12pt;
+	overflow: scroll;
+}
+/*strain container*/
+.strainContainer {
+	height: auto;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	padding: 5pt;
+	display: relative;
+}
+
+.strain-card {
+	width: 250px;
+	height: 250px;
+	max-height: auto;
+	background-color: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	overflow: scroll;
+	margin: 0 auto;
+}
+
+.strain-image {
+	width: 100%;
+	background-color: khaki;
+	height: 45%;
+	position: sticky;
+}
+
+.strain-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/*Login window*/
+#memberLogin {
+	margin: 10pt auto;
+	display: none;
+	place-content: center;
+	width: 250px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	background-color: rgb(255, 255, 255);
+}
+
+#memberLogin h1 {
+	font-size: 14pt;
+	height: 100%;
+	background-color: khaki;
+	padding: 8pt;
+	text-align: center;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+}
+
+/*User Login Form*/
+.form-group {
+	margin: 8pt 5pt;
+}
+
+#username,
+#password {
+	width: 180px;
+	padding-left: 5pt;
+}
+
+#loginSubmitBtn {
+	border: 0;
+	background-color: #ffffff;
+	margin: 8pt 5pt;
+	color: green;
+	font-size: 12pt;
+	padding: 5pt;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+}
+
+/*Dev Doc Signature*/
+.devdoc-logo {
+	width: 40px;
+	height: 40px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.devdoc-logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	opacity: 0.2;
+}
+
+.devdoc-text p {
+	font-size: 9pt;
+	text-align: center;
+	margin-top: 2pt;
+	opacity: 0.7;
+}

@@ -1,0 +1,8 @@
+/*Index CSS - main css, links all css modules*/
+
+
+/*Modules Import*/
+@import './css_modules/resets.css';
+@import './css_modules/layouts.css';
+@import './css_modules/animations.css';
+@import './css_modules/typography.css';

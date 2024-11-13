@@ -1,0 +1,114 @@
+/* CSS Reset - A comprehensive reset to ensure consistent styling across browsers */
+
+/* 1. Universal Selector */
+* {
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	scroll-snap-type: mandatory;
+	scrollbar-width: none;
+	overflow: auto;
+}
+
+/* 2. HTML5 Display Definitions */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+	display: block; /* Ensure HTML5 elements are displayed as block elements */
+}
+
+/* 3. Body Styles */
+body {
+	line-height: 1.5; /* Set a reasonable line height for readability */
+
+	background-color: #ffffff; /* Set a default background color */
+	color: #333333; /* Set a default text color */
+	width: 100vw;
+	overflow: hidden;
+}
+
+/* 4. Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal; /* Remove boldness from headings */
+	margin: 0; /* Remove default margin */
+}
+
+/* 5. Lists */
+ul,
+ol {
+	list-style: none; /* Remove default list styles */
+}
+
+/* 6. Links */
+a {
+	text-decoration: none; /* Remove underline from links */
+	color: inherit; /* Inherit color from parent element */
+}
+
+/* 7. Images */
+img {
+	max-width: 100%; /* Ensure images are responsive */
+	height: auto; /* Maintain aspect ratio */
+	display: block; /* Remove bottom space under images */
+}
+
+/* 8. Tables */
+table {
+	border-collapse: collapse; /* Merge table borders */
+	width: 100%; /* Make tables responsive */
+}
+
+th,
+td {
+	padding: 8px; /* Add padding for table cells */
+	text-align: left; /* Align text to the left */
+}
+
+/* 9. Form Elements */
+input,
+textarea,
+select,
+button {
+	font-family: inherit; /* Inherit font family */
+	font-size: inherit; /* Inherit font size */
+	line-height: inherit; /* Inherit line height */
+	margin: 0; /* Remove default margin */
+}
+
+/* 10. Button Styles */
+button {
+	cursor: pointer; /* Change cursor to pointer for buttons */
+}
+
+/* 11. Miscellaneous */
+blockquote {
+	quotes: none; /* Remove default quotes from blockquotes */
+}
+
+blockquote::before,
+blockquote::after {
+	content: ''; /* Remove default quotation marks */
+}
+
+/* 12. Reset Specific Elements */
+hr {
+	border: none; /* Remove default border */
+	height: 1px; /* Set a default height */
+	background-color: #cccccc; /* Set a default background color */
+}
+
+/* End of CSS Reset */
