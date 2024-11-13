@@ -88,9 +88,10 @@ nav {
 
 /* Apply the animation to the hot picks text */
 #hotPicks {
-	animation: colorTransition 15s infinite alternate; /* 15 seconds duration, infinite loop, alternate direction */
+	/* 15 seconds duration, infinite loop, alternate direction */
 	transition: color 15s ease-in-out; /* Smooth transition */
 	-webkit-animation: colorTransition 15s infinite alternate; /* Webkit fallback */
 	-moz-animation: colorTransition 15s infinite alternate; /* Mozilla fallback */
 	-o-animation: colorTransition 15s infinite alternate; /* Opera fallback */
+	animation: colorTransition 15s infinite alternate;
 }
