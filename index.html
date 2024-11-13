@@ -110,7 +110,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="#page404">
 						<div class="menu-icon">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="#page404">
 						<div class="menu-icon">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -234,12 +234,6 @@
 				>
 				<div class="lab-child" id="ediblesButton"><p>EDIBLES</p></div>
 			</section>
-
-			<!--PAGE 404 NOTICE-->
-			<aside id="page404">
-				<h1>Dang!...</h1>
-				<p>This is not yet complete...try after a while.</p>
-			</aside>
 
 			<br />
 			<!--Line Breaker-->
@@ -1604,7 +1598,17 @@
 				</div>
 			</section>
 		</main>
+
+		<!--PAGE 404 NOTICE-->
+		<aside id="page404" class="modal">
+			<div class="modal-content">
+				<h1>Dang!...</h1>
+				<p>This is not yet complete...try after a while.</p>
+				<button id="closePage404" class="close-button">Go Back</button>
+			</div>
+		</aside>
 		<!--LOGIN WINDOW-->
+
 		<aside class="user-auth-container" id="memberLogin">
 			<h1 class="user-auth-heading">LOGIN</h1>
 			<form action="/login" method="POST">
@@ -1627,5 +1631,6 @@
 		<script src="./js/labContainerScript.js"></script>
 		<script src="./js/membershipLoginScript.js"></script>
 		<script src="./js/hotPicksScript.js"></script>
+		<script src="./js/page404Script.js"></script>
 	</body>
 </html>
