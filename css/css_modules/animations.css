@@ -75,3 +75,19 @@ header,
 nav {
 	transition: filter 0.3s ease;
 }
+
+/* Define keyframes for the color transition */
+@keyframes colorTransition {
+	0% {
+		color: red; /* Start with red */
+	}
+	100% {
+		color: khaki; /* End with khaki */
+	}
+}
+
+/* Apply the animation to the hot picks text */
+#hotPicks {
+	animation: colorTransition 15s infinite alternate; /* 15 seconds duration, infinite loop, alternate direction */
+	transition: color 15s ease-in-out; /* Smooth transition */
+}

@@ -1,0 +1,115 @@
+/* Mobile experience enhancements */
+@media (max-width: 767px) {
+	/* General settings for touch responsiveness */
+	body,
+	button,
+	a,
+	input,
+	textarea {
+		touch-action: manipulation; /* Improve touch responsiveness */
+		-webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+	}
+
+	/* Smooth scrolling for a better navigation experience */
+	html {
+		scroll-behavior: smooth;
+	}
+
+	/* Enhance clickable elements */
+	button,
+	a,
+	.clickable {
+		cursor: pointer;
+		transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+		padding: 12px; /* Ensure tap targets are large enough */
+	}
+
+	button:hover,
+	a:hover,
+	.clickable:hover {
+		background-color: #f0f0f0; /* Lighten background on hover */
+		transform: scale(1.05); /* Slightly enlarge on hover */
+	}
+
+	/* Enhance focus visibility for accessibility */
+	button:focus,
+	a:focus,
+	input:focus,
+	textarea:focus {
+		outline: 2px solid #333; /* Ensure focus is clearly visible */
+	}
+
+	/* Improve scroll performance */
+	* {
+		will-change: transform, opacity; /* Optimize for animations and transitions */
+	}
+
+	/* Reduce accidental touches by increasing spacing */
+	.nav-links a,
+	.menu-item {
+		margin-bottom: 8px; /* Add space between interactive elements */
+	}
+}
+
+/* Mobile experience enhancements for lab-child elements */
+@media (max-width: 767px) {
+	/* Enhance touch responsiveness and feedback */
+	.lab-child {
+		cursor: pointer; /* Ensure pointer cursor for clickable elements */
+		transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for interactions */
+		touch-action: manipulation; /* Improve touch responsiveness */
+		-webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+	}
+
+	/* Provide visual feedback on tap */
+	.lab-child:active {
+		background-color: #e0e0e0; /* Change background color on tap */
+		transform: scale(0.95); /* Slightly shrink on tap for feedback */
+	}
+
+	/* Increase tap target size for accessibility */
+	.lab-child p {
+		margin: 0; /* Remove default margin */
+		padding: 20px; /* Ensure sufficient padding for easy tapping */
+		text-align: center; /* Center text for better readability */
+	}
+
+	/* Improve focus visibility for keyboard navigation */
+	.lab-child:focus {
+		outline: 2px solid #333; /* Visible focus outline */
+	}
+}
+
+/* Mobile experience enhancements for lab-child elements */
+@media (max-width: 767px) {
+	.lab-child {
+		cursor: pointer; /* Ensure pointer cursor for clickable elements */
+		transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for interactions */
+		touch-action: manipulation; /* Improve touch responsiveness */
+		-webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+	}
+
+	/* Provide visual feedback on tap */
+	.lab-child:active {
+		background-color: #e0e0e0; /* Change background color on tap */
+		transform: scale(0.95); /* Slightly shrink on tap for feedback */
+	}
+
+	/* Remove hover effect on mobile */
+	.lab-child:hover {
+		background-color: initial; /* Reset background color on hover */
+		transform: none; /* Reset transform on hover */
+	}
+
+	/* Increase tap target size for accessibility */
+	.lab-child p {
+		margin: 0; /* Remove default margin */
+		padding: 20px; /* Ensure sufficient padding for easy tapping */
+		text-align: center; /* Center text for better readability */
+	}
+
+	/* Improve focus visibility for keyboard navigation */
+	.lab-child:focus {
+		outline: 2px solid #333; /* Visible focus outline */
+	}
+}

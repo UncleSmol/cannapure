@@ -410,8 +410,8 @@ main {
 
 /*Dev Doc Signature*/
 .devdoc-logo {
-	width: 40px;
-	height: 40px;
+	width: 24px;
+	height: 24px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-ms-border-radius: 2px;
@@ -429,7 +429,7 @@ main {
 }
 
 .devdoc-text p {
-	font-size: 9pt;
+	font-size: 7pt;
 	text-align: center;
 	margin-top: 2pt;
 	opacity: 0.7;
