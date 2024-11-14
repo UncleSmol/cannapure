@@ -95,3 +95,37 @@ nav {
 	-o-animation: colorTransition 15s infinite alternate; /* Opera fallback */
 	animation: colorTransition 15s infinite alternate;
 }
+
+/* Mobile experience enhancements for lab-child elements */
+@media (max-width: 767px) {
+	.lab-child {
+		cursor: pointer; /* Ensure pointer cursor for clickable elements */
+		transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for interactions */
+		touch-action: manipulation; /* Improve touch responsiveness */
+		-webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+	}
+
+	/* Prioritize active state to prevent hover persistence */
+	.lab-child:active {
+		background-color: #e0e0e0; /* Change background color on tap */
+		transform: scale(0.95); /* Slightly shrink on tap for feedback */
+	}
+
+	/* Remove hover effect on mobile */
+	.lab-child:hover {
+		background-color: initial; /* Reset background color on hover */
+		transform: none; /* Reset transform on hover */
+	}
+
+	/* Increase tap target size for accessibility */
+	.lab-child p {
+		margin: 0; /* Remove default margin */
+		padding: 20px; /* Ensure sufficient padding for easy tapping */
+		text-align: center; /* Center text for better readability */
+	}
+
+	/* Improve focus visibility for keyboard navigation */
+	.lab-child:focus {
+		outline: 2px solid #333; /* Visible focus outline */
+	}
+}

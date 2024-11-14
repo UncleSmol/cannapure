@@ -173,6 +173,38 @@ main {
 	-o-border-radius: 20px;
 	border-radius: 20px;
 	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	flex: 0 0 auto;
+	transition: transform 0.3s ease; /* Smooth transition for scaling */
+	transform: scale(0.9); /* Initial scale down */
+}
+
+.hot-picks-wrapper::before,
+.hot-picks-wrapper::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 20px; /* Width of the fade effect */
+	pointer-events: none; /* Allow clicks to pass through */
+	z-index: 1;
+}
+
+.hot-picks-wrapper::before {
+	left: 0;
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 0)
+	); /* Fading effect from left */
+}
+
+.hot-picks-wrapper::after {
+	right: 0;
+	background: linear-gradient(
+		to left,
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 0)
+	); /* Fading effect from right */
 }
 
 .hot-picks-image {
