@@ -31,9 +31,15 @@ body {
 	line-height: 1.5; /* Set a reasonable line height for readability */
 
 	background-color: #ffffff; /* Set a default background color */
+	background-image: url('https://hdwallpaperim.com/wp-content/uploads/2017/08/23/466834-smoke-gradient-digital_art.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-clip: border-box;
 	color: #333333; /* Set a default text color */
 	width: 100vw;
-	overflow: hidden;
+	height: 100svh;
+	overflow: scroll;
 }
 
 /* 4. Headings */

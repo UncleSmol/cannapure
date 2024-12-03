@@ -6,25 +6,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
+
 document.addEventListener('DOMContentLoaded', () => {
-	const hotPicks = document.querySelectorAll('.hot-picks');
-
-	function handleScroll() {
-		hotPicks.forEach((card) => {
-			const rect = card.getBoundingClientRect();
-			const inView = rect.left >= 0 && rect.right <= window.innerWidth;
-
-			if (inView) {
-				card.style.transform = 'scale(1)'; // Scale up when in view
-			} else {
-				card.style.transform = 'scale(0.9)'; // Scale down when out of view
-			}
-		});
-	}
-
-	const wrapper = document.querySelector('.hot-picks-wrapper');
-	wrapper.addEventListener('scroll', handleScroll);
-
-	// Initial check
-	handleScroll();
-});
+	const header = document.querySelector('.header');
+	let lastScrollTop = 0;
+  
+	window.addEventListener('scroll', () => {
+	  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+	  if (scrollTop > lastScrollTop) {
+		// Scroll down - hide the header
+		header.style.top = '-55px'; // Move header up
+	  } else {
+		// Scroll up - show the header
+		header.style.top = '0';
+	  }
+	  lastScrollTop = scrollTop;
+	});
+  });
+  

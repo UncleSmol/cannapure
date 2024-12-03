@@ -87,7 +87,10 @@ nav {
 }
 
 /* Apply the animation to the hot picks text */
-#hotPicks {
+#hotPicks,
+#landingPage h1,
+#landingPage p a,
+.header {
 	/* 15 seconds duration, infinite loop, alternate direction */
 	transition: color 15s ease-in-out; /* Smooth transition */
 	-webkit-animation: colorTransition 15s infinite alternate; /* Webkit fallback */

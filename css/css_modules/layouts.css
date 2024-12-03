@@ -6,15 +6,16 @@
 	top: 0;
 	width: 100%;
 	height: 55px;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	box-shadow: 5px 5px 5px black;
 	padding: 5pt;
 	overflow: none;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
-	background-color: khaki;
+	background-color: #f0e68c;
 	z-index: 99999999;
+	transition: top 0.3s; /* Add transition for smooth sliding */
 }
 
 /*Hamburger Menu*/
@@ -40,7 +41,7 @@
 .navbar {
 	margin-top: 45pt;
 	height: max-content;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	box-shadow: 5px 5px 5px black;
 	width: 250px;
 	margin-left: 5pt;
 	-webkit-border-radius: 10px;
@@ -85,6 +86,7 @@
 	gap: 5pt;
 	padding: 0 2pt;
 	overflow: hidden;
+	margin: 5pt;
 }
 
 .nav-links a p {
@@ -165,46 +167,23 @@ main {
 
 .hot-picks {
 	height: 210px !important;
-	min-width: 135px !important;
+	width: 150px !important;
 	overflow: hidden;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	-ms-border-radius: 20px;
 	-o-border-radius: 20px;
 	border-radius: 20px;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	box-shadow: 5px 5px 5px black;
 	flex: 0 0 auto;
-	transition: transform 0.3s ease; /* Smooth transition for scaling */
-	transform: scale(0.9); /* Initial scale down */
-}
-
-.hot-picks-wrapper::before,
-.hot-picks-wrapper::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 20px; /* Width of the fade effect */
-	pointer-events: none; /* Allow clicks to pass through */
-	z-index: 1;
-}
-
-.hot-picks-wrapper::before {
-	left: 0;
-	background: linear-gradient(
-		to right,
-		rgba(255, 255, 255, 1),
-		rgba(255, 255, 255, 0)
-	); /* Fading effect from left */
-}
-
-.hot-picks-wrapper::after {
-	right: 0;
-	background: linear-gradient(
-		to left,
-		rgba(255, 255, 255, 1),
-		rgba(255, 255, 255, 0)
-	); /* Fading effect from right */
+	transition: transform 0.3s ease;
+	/*Smoothtransitionforscaling*/
+	transform: scale(0.9);
+	/*Initialscaledown*/
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	background-color: #fff;
 }
 
 .hot-picks-image {
@@ -227,18 +206,34 @@ main {
 	display: flex;
 	justify-content: left;
 	flex-wrap: nowrap;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 	scrollbar-width: none;
 	gap: 10pt;
 	height: 260px;
 	width: 100%;
+	min-width: none;
+	max-width: 800px;
+	
+	margin:0 auto;
 	scroll-behavior: smooth;
 	padding-left: 5pt;
 	padding-right: 5pt;
+
+}
+
+.hot-picks-wrapper::-webkit-scrollbar {
+	/* Chrome, Safari and Edge */
+	display: none;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
 
 /*Section class margins*/
 #labContainer {
-	margin: 5pt;
+	margin-top: 5pt;
 	display: flex;
 	gap: 5pt;
 	justify-content: center;
@@ -249,11 +244,17 @@ main {
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 	border-radius: 10px;
+	padding: 10px;
+	max-width: 800px;
+	width: 800px;
+	min-width: none;
+	margin: 0 auto;
 }
 
 /*Lab Children*/
 .lab-child {
 	width: 80px;
+	min-width: none;
 	height: 80px;
 	cursor: pointer;
 	display: inline-block;
@@ -284,7 +285,7 @@ main {
 	-ms-border-radius: 4px;
 	-o-border-radius: 4px;
 	border-radius: 4px;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	box-shadow: 5px 5px 5px black;
 }
 
 /*Page not ready message*/
@@ -305,7 +306,7 @@ main {
 	background-color: khaki;
 	padding: 20px;
 	border-radius: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 5px 5px 5px black;
 	width: 80%;
 	max-width: 400px;
 	text-align: center;
@@ -330,7 +331,7 @@ main {
 	font-size: 16px;
 	border-radius: 5px;
 	cursor: pointer;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 5px 5px 5px black;
 	transition: background-color 0.3s ease;
 }
 
@@ -339,8 +340,10 @@ main {
 }
 
 /*Lab*/
+
 .section {
 	height: auto;
+	width: 800px;
 	padding: 5pt;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -348,25 +351,39 @@ main {
 	-o-border-radius: 10px;
 	border-radius: 10px;
 	margin-top: 12pt;
-	overflow: scroll;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
 }
 /*strain container*/
 .strainContainer {
 	height: auto;
+	width: 100%;
+	margin: 0 auto;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 	border-radius: 10px;
 	padding: 5pt;
-	display: relative;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 15pt;
+	align-items: flex-start;
+
+	
 }
 
 .strain-card {
-	width: 250px;
+	width: 150px;
 	height: 250px;
 	max-height: auto;
-	background-color: #fff;
+	background-color: khaki;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -374,6 +391,8 @@ main {
 	border-radius: 10px;
 	overflow: scroll;
 	margin: 0 auto;
+	box-shadow: 5px 5px 5px black;
+	border: 1px solid black;
 }
 
 .strain-image {
@@ -386,13 +405,13 @@ main {
 .strain-card img {
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
+	object-fit: cover;
 }
 
-/*Login window*/
-#memberLogin {
-	margin: 10pt auto;
+/*Membership Digital Card*/
+#membershipDigitalCard {
 	display: none;
+	margin: 10pt auto;
 	place-content: center;
 	width: 250px;
 	-webkit-border-radius: 10px;
@@ -400,44 +419,87 @@ main {
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 	border-radius: 10px;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	box-shadow: 5px 5px 5px black;
 	background-color: rgb(255, 255, 255);
 }
 
-#memberLogin h1 {
+#membershipDigitalCard h1 {
 	font-size: 14pt;
 	height: 100%;
-	background-color: khaki;
+	background-color: rgba(240, 230, 140, 0);
 	padding: 8pt;
 	text-align: center;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
 }
 
-/*User Login Form*/
+/*Membership Card*/
 .form-group {
 	margin: 8pt 5pt;
 }
 
-#username,
-#password {
-	width: 180px;
-	padding-left: 5pt;
+#membershipDigitalCard {
+	width: 250px;
+	padding: 10pt;
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: 5px 5px 5px black;
+	margin: 10pt auto;
+	text-align: center;
+	border: 1px solid khaki;
+	font-size: 11pt; /* Reduced font size */
 }
 
-#loginSubmitBtn {
-	border: 0;
-	background-color: #ffffff;
-	margin: 8pt 5pt;
-	color: green;
-	font-size: 12pt;
+.card-header {
+	background-color: khaki;
+	border-radius: 10px 10px 0 0;
+	padding: 8pt;
+	box-shadow: 5px 5px 5px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.membership-logo {
+	width: 50px;
+	margin-right: 10px;
+}
+
+.user-auth-heading {
+	font-size: 13pt; /* Adjusted font size */
+	margin: 0;
+	color: #333;
+}
+
+.membership-info {
+	padding: 10pt;
+	font-size: 11pt; /* Reduced font size */
+	color: #555;
+}
+
+.membership-info p {
+	margin: 5pt 0;
+}
+
+.form-group {
+	margin: 10pt 0;
+	text-align: left;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5pt;
+}
+
+.form-group input {
+	width: 100%;
 	padding: 5pt;
-	cursor: pointer;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
 	border-radius: 5px;
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.229);
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.member-since {
+	font-size: 10pt; /* Slightly smaller font size for emphasis */
+	color: #777;
 }
 
 /*Dev Doc Signature*/
@@ -465,4 +527,193 @@ main {
 	text-align: center;
 	margin-top: 2pt;
 	opacity: 0.7;
+}
+
+/*Landing Page*/
+.landing,
+.about-us,
+.contact-us {
+	height: 100svh;
+	padding-top: 9pt;
+	display: grid;
+	place-content: center;
+	overflow: scroll;
+}
+#landingContentWrapper{
+	max-width: 800px;
+	height: auto;
+	margin: 0 auto;
+	background-color: #f9f9f9;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow: hidden;
+	box-shadow: 5px 5px 5px black;
+}
+
+#landingPage h1,
+#landingPage p {
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+	text-wrap-mode: wrap;
+	word-wrap: break-word; 
+	overflow-wrap: break-word; 
+	white-space: normal;
+}
+
+.landing-logo {
+	margin: 0 auto;
+	width: 200px;
+	height: 100%;
+	object-fit: contain;
+}
+
+#landing-logo img {
+	width: 100%;
+}
+
+.about-us {
+	height: 100%;
+	background-color: #f9f9f9;
+	padding: 8pt;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px black;
+	margin: 9pt auto;
+	max-width: 800px;
+	color: #333;
+	overflow: scroll;
+}
+
+.about-us h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	color: #2c3e50;
+	height: 100%;
+}
+
+.about-us h3 {
+	font-size: 18px;
+	margin-top: 10px;
+	color: #34495e;
+	height: 100%;
+}
+
+.about-us p,
+.about-us li {
+	height: 100%;
+	font-size: 14px;
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+
+.about-us ul {
+	list-style-type: none;
+	height: fit-content;
+}
+
+.about-us strong {
+	color: #e74c3c;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap to the next row */
+  justify-content: center; /* Center the items horizontally */
+  gap: 15px;
+  padding: 15px;
+  flex-direction: column; /* Ensure the heading stays on top */
+}
+
+h1 {
+  width: 100%; /* Make the heading take full width */
+  text-align: center;
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.team-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap to the next row */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 15px;
+}
+
+.team-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 30%; /* Set the width of each card to 30% to fit 3 per row */
+  max-width: 300px;
+  overflow: scroll;
+}
+
+.team-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  object-fit: cover;
+}
+
+.team-name {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.team-position {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.team-bio {
+  font-size: 10px;
+  color: #777;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    width: 45%; /* Adjust the card width for tablets to 2 per row */
+  }
+  #landingContentWrapper, #labContainer, .section, .about-us, .hot-picks-wrapper{
+	width: 95%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+  #landingPage h1{
+	font-size: 24px;
+  }
+
+  #landing p{
+	font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    width: 100%; /* Adjust the card width for mobile devices to 1 per row */
+  }
+
+  #landingPage, #labContainer, .section{
+	width: 100%;
+  }
+
+  #landingPage h1{
+	font-size: 20px;
+  }
+
+  
 }
